@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f8f0e8;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 90vw;       /* responsive */
+  max-width: 600px;  /* nice size */
+}
+
+#sketchCanvas {
+  width: 100%;   /* responsive canvas */
+  height: auto;
+  display: block;
+  background: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Controls below canvas */
+.controls {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* stack vertically */
+  align-items: center;
+  gap: 20px;
+}
+
+.control-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#speedRange {
+  width: 180px;
+}
+
+/* Floating-style replay button with fade-in */
+#replayBtn {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #222, #444);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, background 0.3s ease, opacity 0.6s ease;
+  opacity: 0;               /* hidden by default */
+  pointer-events: none;     /* not clickable until shown */
+}
+
+#replayBtn.show {
+  opacity: 1;               /* fade in */
+  pointer-events: auto;     /* clickable */
+}
+
+#replayBtn:hover {
+  background: linear-gradient(135deg, #333, #555);
+  transform: scale(1.05);
+}
+
+#replayBtn:active {
+  transform: scale(0.95);
+}

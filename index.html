@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handsketched Portrait Animation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Canvas container -->
+  <div class="container">
+    <canvas id="sketchCanvas"></canvas>
+  </div>
+
+  <!-- Controls below canvas -->
+  <div class="controls">
+    <!-- Speed slider -->
+    <div class="control-row">
+      <label for="speedRange">Sketch Speed:</label>
+      <input type="range" id="speedRange" min="1" max="50" value="5">
+      <span id="speedValue">5</span>
+    </div>
+
+    <!-- Replay button (will fade in when sketch is done) -->
+    <button id="replayBtn">🔄 Play Again</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
